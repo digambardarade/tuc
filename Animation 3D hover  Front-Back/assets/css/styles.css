@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card{
+  /* perspective: 500px; */
+}
+
+.cardBox {
+  width: 250px;
+  height: 300px;
+  margin: 50px;
+  padding: 20px;
+  position: relative;
+  transition: all 0.7s linear;
+  transform-style: preserve-3d; 
+}
+
+.card-f, .card-b {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 40px;
+}
+
+.card-b{
+  background-color: blue;
+  transform: rotateY(180deg);
+  backface-visibility: hidden
+}
+.card-f {
+  backface-visibility: hidden;
+}
+.card:hover .cardBox {
+  transform: rotateY(180deg);
+}
